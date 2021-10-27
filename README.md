@@ -1,4 +1,4 @@
-# Spectacles Plugin System
+# MicroCord Engine
 
 Plugins system which is an extention of Spectacles made for Kashima, Work in Progress.
 

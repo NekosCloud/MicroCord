@@ -109,6 +109,6 @@ export const NekoSoft = `
  ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢟⠋⡱⠁ ⡰⡟⠑⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡦
 
                      © NEKOSOFT ${new Date().getFullYear()}
-    SPS Version: ${JSON.parse(fs.readFileSync('./package.json')).version}
+    Engine Version: ${JSON.parse(fs.readFileSync('./package.json')).version}
     Node.JS Version: ${process.version}
 `;
