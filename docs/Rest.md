@@ -4,7 +4,7 @@
 
 ## Rest API Interface
 
-### [`Router`](https://bitbucket.org/kashimabot/spectaclespluginsys/src/main/src/Rest/Router.js) class
+### [`Router`](../src/Rest/Router.js) class
   
   - Parameters
     

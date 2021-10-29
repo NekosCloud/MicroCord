@@ -2,7 +2,7 @@
 
 ## Gateway API Interface
 
-### [`GatewayConnector`](https://bitbucket.org/kashimabot/spectaclespluginsys/src/main/src/Gateway/Gateway.js) class
+### [`GatewayConnector`](../src/Gateway/Gateway.js) class
 
   - Parameters
 
