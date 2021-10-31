@@ -1,6 +1,6 @@
 # MicroCord Engine
 
-Plugins system which is an extention of Spectacles made for Kashima, Work in Progress.
+Plugins system which is an extention of Spectacles made for the intent of using it in Kashima, Work in Progress.
 
 Docs: [Click Me!](./docs/README.md)
 
