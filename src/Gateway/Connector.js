@@ -5,7 +5,7 @@ import EventEmitter from 'events';
 const EventsKeys = Object.keys(Events);
 
 export class GatewayConnector extends EventEmitter {
-    constructor(groupName = 'gateway', host = 'localhost', list = EventsKeys) {
+    constructor(host = 'localhost', groupName = 'gateway', list = EventsKeys) {
         super();
         this.amqp = new Amqp(groupName);
         this._subscribe(host, list);
@@ -18,9 +18,9 @@ export class GatewayConnector extends EventEmitter {
         return await this.amqp.publish(amqpEvent, amqpPacket, options);
     }
 
-    async _subscribe(host, list) {
+    async _subscribe(host) {
         await this.amqp.connect(host);
-        await this.amqp.subscribe(list);
+        await this.amqp.subscribe(EventsKeys);
         await this.amqp.createQueue('0');
 
         for (const event of EventsKeys) {
@@ -28,7 +28,7 @@ export class GatewayConnector extends EventEmitter {
                 ack();
                 this.emit(Events[event], data);
                 // workaround
-                this.emit('raw', data);
+                this.emit('raw', { event, data });
             });
         }
         this.emit('connected', true);

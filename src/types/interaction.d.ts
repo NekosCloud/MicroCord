@@ -1,11 +1,13 @@
-import { Snowflake } from "@spectacles/util";
+import { Snowflake } from "./Common";
+import { Member } from "./Guild";
+import { User } from "./User";
 
 export interface Interaction {
     id: Snowflake;
     guildId?: string;
     channelId?: string;
-    member?: object; // TODO
-    user?: object; // TODO
+    member?: Member;
+    user?: User;
     token: string;
 }
 
